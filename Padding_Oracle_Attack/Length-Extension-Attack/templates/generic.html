@@ -1,0 +1,34 @@
+$def with (posts,err)
+<html>
+	<head>
+		<link href="static/calpoly.css" type='text/css' rel='stylesheet' />
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<div id='topRow'>
+			$if err:
+				<center>
+				<font color="red">$err</font>
+				</center>
+			$else:
+				<center>&nbsp;</center>
+			<form name="newpost" method="get" action="post">
+				<input type="submit" value="Post">
+			</form>
+		</div>
+		<div id='rowText'></div>
+				$for post in posts:
+					<div id='postHeader' align="left">
+						<b><font color="white">$post[0] says:</font></b>
+					</div>
+					<div id='postContainer'>
+						$post[1]
+					</div>
+					<div id='postFooter'>
+						$post[2]
+					</div>					
+					<div id='rowText'></div>
+		<div id='bottomRow'>
+		</div>
+	</body>
+</html>
