@@ -1,5 +1,4 @@
 # CSC-323 Cryptography Engineering Labs
-<br><br>
 
 | Lab # | Lab Name | Description | Progress
 -------- | ------- | --------- | -----
